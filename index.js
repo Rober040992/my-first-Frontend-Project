@@ -1,8 +1,16 @@
-import { printAdds } from "./Adds-MVC/controller.js"
+import { addsController } from "./Adds-MVC/controller.js"
+import { notificationController } from "./Notifications-MVC/notification-controller.js"
 
-document.addEventListener("DOMContentLoaded", ()=>{ //preparo el DOM
+document.addEventListener("DOMContentLoaded", () => { //preparo el DOM
 
-    const addsContainer = document.querySelector(".adds-container") //selecciono container
+    const addsContainer = document.querySelector(".adds-container") //selecciono container de los adds
+    const notificationContainer = document.querySelector(".notifications-container") //selecciono container de notificaciones
 
-    printAdds(addsContainer) //le hago printAdd a el container
+    addsController(addsContainer)
+
+    const { showNotification } = notificationController(notificationContainer)
+    //funcion para comunicar los notification y adds Controllers a traves del orquestador
+    addsContainer.addEventListener("A problem has ocurred while loading adds🤦", (event) => {
+        showNotification(event.detail);
+    })
 })

@@ -4,7 +4,7 @@ export async function getAdds() {
         const addInfo = await response.json()
 
         if (!response.ok) {
-            throw new Error("Sourece not existing");
+            throw new Error("🆘Source not existing🆘");
         }
         return addInfo;
     }

@@ -1,7 +1,7 @@
 import { getAdds } from "./model.js";
 import { drawAdds } from "./drawAddcontroller.js";
 
-export async function printAdds(addsContainer) {
+export async function addsController(addsContainer) {
   const loader = document.querySelector(".loader")
   addsContainer.innerHTML = "";
 
@@ -10,9 +10,11 @@ export async function printAdds(addsContainer) {
     const adds = await getAdds();
     drawAdds(adds, addsContainer)
 
-  } catch (error) {
-    alert(error.message)
-
+  } catch (error) { //aqui lanzamos un error a modo de evento custom
+    const notificationEvent = new CustomEvent("A problem has ocurred while loading adds🤦", {
+      detail: error.message
+    })
+    addsContainer.dispatchEvent(notificationEvent)
   } finally {
     loader.classList.toggle("hidden")
   }

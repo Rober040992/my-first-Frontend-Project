@@ -1,5 +1,5 @@
 import { getAdds } from "./model.js";
-import { drawAdds } from "./drawAddcontroller.js";
+import { drawAdds } from "./drawAddController.js";
 
 export async function addsController(addsContainer) {
   const loader = document.querySelector(".loader")

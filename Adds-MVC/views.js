@@ -1,3 +1,4 @@
+//aqui creo las finciones que va a usar el drawAddcontroller
 export const buildAdd = (add) => {
     const newAdd = document.createElement('div');
     newAdd.innerHTML = `

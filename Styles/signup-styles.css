@@ -1,0 +1,62 @@
+     /* General body styling */
+     body {
+        background-color: #121212; /* Oscuro */
+        color: #e0e0e0; /* Gris claro */
+        font-family: Arial, sans-serif;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        height: 100vh;
+        margin: 0;
+      }
+
+      /* Form container */
+      form {
+        background-color: #1e1e1e; /* Un poco más claro */
+        padding: 20px;
+        border-radius: 8px;
+        box-shadow: 0 4px 10px rgba(0, 0, 0, 0.3);
+        max-width: 400px;
+        width: 100%;
+      }
+
+      /* Labels */
+      label {
+        display: block;
+        margin-bottom: 8px;
+        font-size: 0.9rem;
+        color: #c5c5c5; /* Gris más tenue */
+      }
+
+      /* Inputs */
+      input {
+        width: 100%;
+        padding: 10px;
+        margin-bottom: 15px;
+        border: 1px solid #333; /* Bordes oscuros */
+        border-radius: 5px;
+        background-color: #262626; /* Fondo más claro */
+        color: #e0e0e0;
+      }
+
+      input:focus {
+        outline: none;
+        border-color: #4a90e2; /* Azul brillante */
+      }
+
+      /* Button */
+      button {
+        width: 100%;
+        padding: 10px;
+        background-color: #4a90e2; /* Azul brillante */
+        color: #fff;
+        border: none;
+        border-radius: 5px;
+        font-size: 1rem;
+        cursor: pointer;
+        transition: background-color 0.3s;
+      }
+
+      button:hover {
+        background-color: #357ab8; /* Azul más oscuro al hover */
+      }

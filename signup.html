@@ -3,32 +3,40 @@
   <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>Registro</title>
+    <title>Register</title>
+    <link rel="stylesheet" href="./Styles/signup-styles.css">
   </head>
   <body>
     <form>
-      <label for="user-mail">mail</label>
-      <input type="mail" id="user-mail" name="user-mail" required />
+      <label for="user-mail">Email</label> <!-- -->
+      <input type="mail" id="user-mail" name="Email" required />
+
       <br />
-      <label for="password">password</label>
-      <input
-        type="password"
+
+      <label for="password">Password</label> <!-- -->
+      <input 
         id="password"
-        name="password"
-        required
-        minlength="4"
-      />
-      <br />
-      <label for="password-confirm">confirm password</label>
-      <input
         type="password"
-        id="password-confirm"
-        name="password-confirm"
+        name="Password"
         required
-        minlength="4"
+        minlength="3"
       />
-      <button type="submit">Sign User</button>
+      <br/>
+
+      <label for="password-confirm">Repeat your password</label> <!-- -->
+      <input
+        id="password-confirm"
+        type="password"
+        name="Repeat your password"
+        required
+        minlength="3"
+      />
+      <br>
+
+      <button type="submit">Register User</button> <!-- -->
+
     </form>
-    <script type="module" src="./signup-coordinator.js"></script>
+
+    <script type="module" src="./signup-coordinator.js"></script> <!--signup coordinator -->
   </body>
 </html>

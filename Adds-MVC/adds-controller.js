@@ -1,5 +1,5 @@
-import { getAdds } from "./model.js";
-import { drawAdds } from "./drawAddController.js";
+import { getAdds } from "./adds-model.js";
+import { drawAdds } from "./adds-drawAdd.js";
 import {dispatchEventMessageType} from "../Notifications-MVC/eventDispatcherType.js"
 
 export async function addsController(addsContainer) {

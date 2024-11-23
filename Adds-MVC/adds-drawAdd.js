@@ -1,4 +1,4 @@
-import { buildAdd, emptyAddsList } from "./views.js";
+import { buildAdd, emptyAddsList } from "./adds-views.js";
 
 //handle and draw using 2 functions from views
 export function drawAdds(adds, addsContainer) {

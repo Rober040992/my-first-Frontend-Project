@@ -1,4 +1,4 @@
-import { addsController } from "./Adds-MVC/addsController.js"
+import { addsController } from "./Adds-MVC/adds-controller.js"
 import { notificationController } from "./Notifications-MVC/notification-controller.js"
 
 document.addEventListener("DOMContentLoaded", () => { //preparo el DOM

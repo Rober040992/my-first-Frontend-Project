@@ -10,7 +10,7 @@ document.addEventListener("DOMContentLoaded", () => { //preparo el DOM
 
     const { showNotification } = notificationController(notificationContainer)
     //funcion para comunicar los notification y adds Controllers a traves del orquestador
-    addsContainer.addEventListener("A problem has ocurred while loading adds🤦", (event) => {
-        showNotification(event.detail);
+    addsContainer.addEventListener("load-info", (event) => {
+        showNotification(event.detail.message, event.detail.type);
     })
 })

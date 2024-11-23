@@ -13,5 +13,5 @@ export const buildAdd = (add) => {
 
 //to show when no Adds
 export function emptyAddsList() {
-    return "😢 NO ADDS 😒";
+    return "<b>😢 NO ADDS AT THE MOMENT 😒";
 }

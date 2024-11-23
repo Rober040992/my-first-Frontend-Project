@@ -1,3 +1,6 @@
-export function buildNotification(message) {
-    return `<h2>${message}</h2>`
+export function buildNotification(message, type) {
+    return `<div>
+    <h2>${type}</h2>
+    <h2>${message}</h2>
+            </div>`
   }

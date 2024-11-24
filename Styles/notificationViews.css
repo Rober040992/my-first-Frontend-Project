@@ -1,0 +1,43 @@
+
+.notification {
+    display: flex; 
+    justify-content: space-around; 
+    align-items: center; 
+    width: 70%; 
+    margin: 0 auto; 
+    padding: 0.2rem; 
+    border: 1px solid #ccc;
+    border-radius: 5px; 
+    background-color: #7b525282;
+}
+
+.notification-type {
+    font-weight: bold;
+    color: rgb(23, 214, 23);
+}
+
+.notification-message {
+    color: red
+}
+
+@keyframes fadeInOut {
+    0% {
+        opacity: 0;
+        transform: translateY(-10px); /* Aparece desde arriba */
+    }
+    10% {
+        opacity: 1;
+        transform: translateY(0); /* Totalmente visible */
+    }
+    90% {
+        opacity: 1;
+        transform: translateY(0); /* Permanece visible */
+    }
+    100% {
+        opacity: 0;
+        transform: translateY(-10px); /* Desaparece hacia arriba */
+    }
+}
+.fade-in-out {
+    animation: fadeInOut 5s ease-in-out forwards; /* 5 segundos: 1s para fade-in, 3s visible, 1s para fade-out */
+}

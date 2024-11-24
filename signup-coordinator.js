@@ -9,7 +9,7 @@ document.addEventListener("DOMContentLoaded", () => {
 
 
   const { showNotification } = notificationController(notificationContainer)
-  signupForm.addEventListener("🤦error ocurred while creating user, try again later", (event) => {
-    showNotification(event.detail)
+  signupForm.addEventListener("load-info", (event) => {
+    showNotification(event.detail.message, event.detail.type)
   })
 })

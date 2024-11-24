@@ -1,4 +1,5 @@
 import { createUser } from "./signup-model.js";
+import {dispatchEventMessageType} from "../Notifications-MVC/eventDispatcherType.js"
 
 export function signupController(form) {
   // 1- get user data from the form
@@ -12,17 +13,18 @@ export function signupController(form) {
     const password = passwordElement.value;
     const passwordConfirm = passwordConfirmElement.value;
 
-    const errors = []; //pushing every error in this array to show after
     // 2- validators
+    const errors = []; //pushing every error in this array to show after
+    
     const emailRegExp = new RegExp(/^\w+([\.-]?\w+)*@\w+([\.-]?\w+)*(\.\w{2,3})+$/);
     if (!emailRegExp.test(userEmail)) { // if mail doesnt match the regular expresion
-      errors.push('bad email format ')
+      errors.push('wrong email format ')
     }
     if (password !== passwordConfirm) { //if the password and password confirm is diff
       errors.push('passwords do not match')
     }
     for (const error of errors) {//EDU, se que estos ifs son cutres pero funcionan de cojones, lo siento
-      if(error === 'bad email format '){
+      if(error === 'wrong email format '){
         alert('🤦 Incorrect email format ')
       }
       if(error === 'passwords do not match'){
@@ -34,18 +36,19 @@ export function signupController(form) {
       handleCreateUser(userEmail, password, form)
     }
   })
-
-  async function handleCreateUser(userEmail, password,signupForm) {
-    // 3- using api to create the user
-    try {
-      await createUser(userEmail, password)
+}
+async function handleCreateUser(userEmail, password,signupForm) {
+  // 3- using api to create the user
+  try {
+    await createUser(userEmail, password)
+    dispatchEventMessageType("User created correclty!", "Type =>👌", signupForm)
+    setTimeout(()=>{
       window.location.href = "/"; // this is index by default
-    } catch (err) {
-      const notificationEvent = new CustomEvent("🤦error ocurred while creating user, try again later", {
-        detail: err.message
-      })
-      signupForm.dispatchEvent(notificationEvent)
-    }
+    },3000)
+  } catch (err) {
+    dispatchEventMessageType(err.message, "Type => 🤬", signupForm)
+    
   }
 }
+
 

@@ -9,11 +9,11 @@ export async function addsController(addsContainer) {
   loader.classList.toggle("hidden")
   try {
     const adds = await getAdds();
-    dispatchEventMessageType("Adds info loaded", "success", addsContainer  )// check this function in ../Notifications-MVC/eventDispatcherType.js"
+    dispatchEventMessageType("Adds info loaded !", "Success! 👌", addsContainer  )// check this function in ../Notifications-MVC/eventDispatcherType.js"
     drawAdds(adds, addsContainer)
 
   } catch (error) { //aqui lanzamos un error a modo de evento custom
-    dispatchEventMessageType(error.message, "error", addsContainer  )
+    dispatchEventMessageType(error.message, "Error 🤬", addsContainer  )
   } finally {
     loader.classList.toggle("hidden")
   }

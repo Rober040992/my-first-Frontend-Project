@@ -11,6 +11,6 @@ export async function createUser(email, password){
       }
     });
     if (!response.ok) {
-      throw new Error("🤦error ocurred while creating user, try again later")
+      throw new Error("🆘Fatal error ocurred🆘")
     }
   }

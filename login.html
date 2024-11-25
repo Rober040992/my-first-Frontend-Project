@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Login</title>
+    <link rel="stylesheet" href="./Styles/signup-styles.css">
+    <link rel="stylesheet" href="Styles/notificationViews.css">
+
+  </head>
+  <body>
+    <form>
+      <h3>Only if you are already register </h3>
+      <label for="user-mail">Email</label> <!-- -->
+      <input type="mail" id="user-mail" name="Email" required />
+
+      <br />
+
+      <label for="password">Password</label> <!-- -->
+      <input 
+        id="password"
+        type="password"
+        name="Password"
+        required
+        minlength="3"
+      />
+
+      <br>
+
+      <div class="btns">
+        <button type="submit">login</button> <!-- -->
+        
+        <div class="notifications-container" ></div>
+    
+        <button id="block-btn-event"></a>Back to Home</button>
+      </div>
+      
+    </form>
+    <script type="module" src="./login-coordinator.js"></script>
+    <script type="module" src="./block-btn-event.js"></script> <!-- block submit event and redirect to home -->
+  </body>
+</html>

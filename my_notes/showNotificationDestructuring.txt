@@ -1,0 +1,37 @@
+El notificationController(notificationContainer) es una función que devuelve un objeto. 
+Por ejemplo:
+
+
+export function notificationController(notificationContainer) {
+    const showNotification = (message, type) => {
+        notificationContainer.innerHTML = `<div>${type}: ${message}</div>`;
+    };
+
+    return {
+        showNotification
+    };
+}
+La función devuelve un objeto que contiene la propiedad showNotification. Cuando haces:
+
+
+const { showNotification } = notificationController(notificationContainer);
+Estás desestructurando el objeto que devuelve notificationController para extraer directamente 
+la función showNotification y asignarla a una variable del mismo nombre.
+
+Ahora puedes usar showNotification directamente, en lugar de tener que escribir 
+notificationController.showNotification.
+
+3. Por qué se usa la desestructuración aquí
+Simplicidad: Permite acceder directamente a las funciones necesarias (en este caso, 
+showNotification) sin tener que escribir siempre notificationController.showNotification.
+Legibilidad: Hace que el código sea más fácil de leer y entender al enfocarte solo en las propiedades que necesitas.
+Evitación de redundancia: Si solo necesitas showNotification, no es necesario mantener una referencia completa al objeto notificationController.
+4. Sin desestructuración
+Si no usas la desestructuración, el código equivaldría a:
+
+
+const notificationCtrl = notificationController(notificationContainer);
+const showNotification = notificationCtrl.showNotification;
+Resumen
+El uso de llaves {} en este caso se debe a que estás desestructurando el objeto retornado por 
+notificationController(notificationContainer) para extraer solo la función showNotification. Es un atajo que hace tu código más limpio y directo.

@@ -39,5 +39,5 @@
     }
 }
 .fade-in-out {
-    animation: fadeInOut 5s ease-in-out forwards; /* 5 segundos: 1s para fade-in, 3s visible, 1s para fade-out */
+    animation: fadeInOut 3s ease-in-out forwards; /* 5 segundos: 1s para fade-in, 3s visible, 1s para fade-out */
 }

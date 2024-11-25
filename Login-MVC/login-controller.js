@@ -28,7 +28,7 @@ async function  handleLogin(userEmail,password, loginForm){ //access to model
         dispatchEventMessageType("User loged!", "Type => 201", loginForm)
         setTimeout(()=>{
             window.location.href = "/"; // this is index by default
-          },5000)
+          },3000)
     }
     catch (error){
         dispatchEventMessageType(error.message, "Type => 401", loginForm)

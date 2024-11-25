@@ -46,7 +46,7 @@ async function handleCreateUser(userEmail, password,signupForm) {
       window.location.href = "/"; // this is index by default
     },3000)
   } catch (err) {
-    dispatchEventMessageType(err.message, "Type => 🤬", signupForm)
+    dispatchEventMessageType(err.message, "Type => 404", signupForm)
     
   }
 }

@@ -1,0 +1,81 @@
+Adds-MVC{
+    tengo en Adds-mvc creado el controlador del index que trae la lista de adds y la muestra 
+    que usa getAdds del modelo que hace el fetching.
+
+    tengo 2 funciones en views usadas por drawAddcontroller  que muestra los adds cuando hay adds 
+    y otra que muestra un mensaje cuando no hay.
+
+    ese drawAddcontroller se usa en el controller.js cuando el getAdds de model ha sido exitoso.
+
+    tengo una ruleta de carga funcionando cuando se esta cargando el listado de adds y para al mostrarse.
+
+    en model.js getAdds la primera lanza error de source con throw 
+    la siguiente en models lanzamos y capturamos un throw que se controla en el controller.js a traves de un customEvent.
+}
+
+Notification-MVC{
+    tengo un sistema de notificaciones por tipo a traves de eventos custom
+    gracias a dispatchEventMessageType puedo lanzar el evento ok o not ok controlado en un 
+    try catch 
+    la notificacion se borra sola a los 5 segundos
+
+}
+
+index-coordinator.js{
+    Es mi orquestador/coordinador de la lista de adds 
+    Propósito general: Conectar y coordinar la funcionalidad de los "adds" y las notificaciones.
+    Flujo de trabajo:
+    Inicia los controladores con sus respectivos contenedores.
+    Escucha la respuesta en el cargado de "adds" y muestra una notificación mediante showNotification.
+    Facilita la comunicación entre el controlador de "adds" y el de notificaciones.
+}
+
+signup{
+    signupcontroller.js;
+        obtener info del user:
+        signup accede a los datos a traves de evento SUBMIT del formulario que controlamos nosotros
+        accedemos a los datos a traves de .value por que queryselector nos da solo un nodo y 
+        tenemos que acceder al valor que es lo que pone el user en el unput
+
+        validar:
+        usamos una expresion regular con la clase RegExp y su instancia .test que valida la 
+        condicion que le pasa la expresion regular
+        los errores lo introducimos en el array para luego mostrarlos al user desde ese array
+    
+
+    signup-model.js;
+    le pasamos email y password
+        hacemos feth a auth/register y le pasamos un objeto con method y body
+        dentro de body le pasamos a string el Json que contiene un userName:email y password
+        y le pasamos un header content type {"aplication/json"}
+        si la respuesta es NOT OK lanza un error que lo controlamos en controller
+        con la funcion handleCreateUser y usamos el sistema de notificacion para
+        lanzar un nodo en pantalla y si es ok nos muestra otra notificacion de correclty
+        y nos redirecciona al index una vez registrado el user en la DB
+
+
+    signUp-coordinator.js:
+        igual que index-coordinator.js pero entre el signup y notifications
+    
+}
+
+session{
+    session-controller.js
+        Comprueba si el usuario está logueado (checkIfUserIsLogged).
+        Si está logueado:
+        Renderiza la vista correspondiente (buildAuthorizedSession).
+        Configura el botón para cerrar sesión, eliminando el token y actualizando la vista.
+        Si no está logueado:
+        Renderiza la vista correspondiente (buildUnauthorizedSession).
+        Permite alternar dinámicamente entre estados (logueado o no) cada vez que se ejecuta sessionController.
+        Conclusión
+        El archivo session-controller.js es un controlador que:
+
+        Evalúa el estado de la sesión mediante el localStorage.
+        Renderiza la vista adecuada usando funciones de session-view.js.
+        Maneja la lógica para cerrar sesión y redirige dinámicamente entre vistas dependiendo del estado del usuario.
+}
+
+createAdd{
+    
+}

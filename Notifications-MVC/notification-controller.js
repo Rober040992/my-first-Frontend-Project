@@ -6,7 +6,7 @@ export function notificationController (notificationContainer){
 
       setTimeout(()=>{
         notificationContainer.innerHTML = ""; 
-      },5000)
+      },3000)
 
       }
       return {

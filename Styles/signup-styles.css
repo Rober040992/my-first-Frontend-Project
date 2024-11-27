@@ -65,3 +65,8 @@
         color: red;
         font-size: 60%;
       }
+      .status-form-options{
+        display: flex;
+        align-items: center;
+        justify-content: space-evenly;
+      }

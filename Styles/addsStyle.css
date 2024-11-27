@@ -1,0 +1,78 @@
+/* Estilos para el contenedor principal */
+.each-add {
+    margin: 1rem auto;
+    display: flex; 
+    flex-wrap: wrap; 
+    gap: 2rem; 
+    justify-content: center; 
+    padding: 1rem; 
+    border-radius: 8px; 
+    box-shadow: 1px 1px 20px 4px rgba(62, 152, 237, 0.1); /* Sombra ligera */
+}
+
+
+/* Estilo general del contenedor del anuncio */
+.each-add {
+    width: 300px; /* Ancho fijo para cada anuncio */
+    background-color: #0c0d10; /* Fondo blanco */
+    border: 2px solid #1b1b2185; /* Borde gris claro */
+    border-radius: 8px; /* Bordes redondeados */
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1); /* Sombra sutil */
+    padding: 16px; /* Espaciado interno */
+    overflow: hidden;
+    transition: transform 0.2s, box-shadow 0.2s; /* Efecto de hover */
+}
+
+/* Configuración del grid */
+.add-grid {
+    display: grid; /* Activamos grid */
+    grid-template-columns: 1fr; /* Una columna por defecto */
+    grid-template-rows: auto auto auto auto auto; /* Filas para cada elemento */
+    row-gap: 8px; /* Espacio entre filas */
+    justify-items: start; /* Alineación horizontal de los elementos */
+    align-items: center; /* Alineación vertical de los elementos */
+}
+
+/* Estilos individuales */
+.add-img {
+    width: 100%; /* Asegura que ocupe todo el ancho */
+    height: 150px; /* Altura fija */
+    background-color: #423d3dab; /* Fondo de reserva si no hay imagen */
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-size: 12px; /* Texto pequeño si no hay imagen */
+    object-fit: cover; /* Asegura que la imagen se escale correctamente */
+    border-radius: 4px;
+    overflow: hidden;
+}
+
+.add-name {
+    font-size: 18px;
+    font-weight: bold;
+    color: #bdbbbb;
+}
+
+.add-description {
+    font-size: 14px;
+    color: #555;
+    line-height: 1.4;
+}
+
+.add-price {
+    font-size: 16px;
+    font-weight: bold;
+    color: #007BFF;
+}
+
+.add-status {
+    font-size: 14px;
+    font-style: italic;
+    color: #6eca3c;
+}
+
+/* Efecto hover en el anuncio */
+.add-item:hover {
+    transform: translateY(-5px); /* Eleva el anuncio ligeramente */
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2); /* Incrementa la sombra */
+}

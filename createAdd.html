@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Create your Add</title>
+    <link rel="stylesheet" href="./Styles/signup-styles.css">
+    <link rel="stylesheet" href="Styles/notificationViews.css">
+</head>
+
+<body>
+    <form id="create-add-form">
+        <h2>Type your Add content here 👇</h2>
+
+        <div>
+            <label for="name">Add Name</label>
+            <input type="text" id="name" name="name" placeholder="name" autocomplete="off" required>
+        </div>
+
+        <div>
+            <label for="description">Description</label>
+            <input type="text" id="description" name="description" placeholder="description" autocomplete="off" required>
+        </div>
+
+        <div>
+            <label for="price">Price</label>
+            <input type="number" id="price" name="price" placeholder="price" autocomplete="off" required>
+        </div>
+
+        <div class="status-form-options">
+            <label for="status">Status 👉</label>
+            <select id="status" name="status" autocomplete="off" required>
+                <option value="Sell">Sell</option>
+                <option value="Buy">Buy</option>
+            </select>
+        </div>
+        
+        <br>
+        <div>
+            <label for="img">URL here</label>
+            <input type="url" id="img" name="img" placeholder="Paste Image URL here" autocomplete="url">
+        </div>
+        
+        <button type="submit">Create Add</button>
+        <button type="button" id="block-btn-event">Back to Home</button>
+    </form>
+
+    <script type="module" src="./createAdd-coordinator.js"></script> <!--defer: Asegura que el script se ejecute después de que el DOM esté completamente cargado.-->
+    <script type="module" src="./block-btn-event.js"></script> <!--block event and redirect btn -->
+</body>
+
+</html>

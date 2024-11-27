@@ -2,11 +2,16 @@
 export const buildAdd = (add) => {
     const newAdd = document.createElement('div');
     newAdd.innerHTML = `
-        <div> ${add.img} </div>
-        <div> ${add.name} </div>
-        <div> ${add.description} </div>
-        <div> ${add.price} &</div>
-        <div> ${add.status} </div> 
+        <a class="each-add">
+            <div class="add-grid">
+                <img src="${add.img}" class="add-img">
+                <div class="add-name">${add.name}</div>
+                <div class="add-description"> Description: ${add.description}</div>
+                <div class="add-price">${add.price} &dollar;</div>
+                <div class="add-status"> To :${add.status}</div>
+            </div>
+        </a>
+         
     `;
     return newAdd;
 }

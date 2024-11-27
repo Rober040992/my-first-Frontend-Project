@@ -1,3 +1,4 @@
+// BACK HOME BUTTON FEATURE
 const boton = document.getElementById("block-btn-event");//selection the node
     
 boton.addEventListener("click", (event) => { //add listener to catch the even

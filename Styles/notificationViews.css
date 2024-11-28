@@ -8,16 +8,16 @@
     padding: 0.2rem; 
     border: 1px solid #ccc;
     border-radius: 5px; 
-    background-color: #7b525282;
+    background-color: #4d516082;
 }
 
 .notification-type {
     font-weight: bold;
-    color: rgb(23, 214, 23);
+    color: rgba(49, 192, 49, 0.833);
 }
 
 .notification-message {
-    color: red
+    color: rgba(200, 56, 56, 0.983)
 }
 
 @keyframes fadeInOut {

@@ -7,18 +7,16 @@
     justify-content: center; 
     padding: 1rem; 
     border-radius: 8px; 
-    box-shadow: 1px 1px 20px 4px rgba(62, 152, 237, 0.1); /* Sombra ligera */
 }
 
 
 /* Estilo general del contenedor del anuncio */
 .each-add {
     width: 300px; /* Ancho fijo para cada anuncio */
-    background-color: #0c0d10; /* Fondo blanco */
+    background-color: #0c0d109a; /* Fondo blanco */
     border: 2px solid #1b1b2185; /* Borde gris claro */
     border-radius: 8px; /* Bordes redondeados */
-    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1); /* Sombra sutil */
-    padding: 16px; /* Espaciado interno */
+    box-shadow: 0 7px 10px rgba(0, 0, 0, 0.87); /* Sombra sutil */
     overflow: hidden;
     transition: transform 0.2s, box-shadow 0.2s; /* Efecto de hover */
 }
@@ -70,9 +68,29 @@
     font-style: italic;
     color: #6eca3c;
 }
+a{
+    text-decoration: none;
+}
 
-/* Efecto hover en el anuncio */
-.add-item:hover {
-    transform: translateY(-5px); /* Eleva el anuncio ligeramente */
-    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2); /* Incrementa la sombra */
+
+.see-details-anchor {
+    display: inline-block; 
+    text-decoration: none; 
+    font-family: Arial, sans-serif; 
+    font-size: 14px; 
+    color: #ffffff;
+    background-color: #3837485c; 
+    padding: 8px 16px; 
+    border-radius: 4px; 
+    transition: background-color 0.3s ease, transform 0.2s ease; 
+}
+
+.see-details-anchor:hover {
+    background-color: #16151a; 
+    transform: scale(1.05); 
+}
+
+.see-details-anchor:active {
+    background-color: #222222;
+    transform: scale(0.98);
 }

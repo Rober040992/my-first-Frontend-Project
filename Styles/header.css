@@ -3,8 +3,7 @@ header {
     display: flex;
     justify-content: space-between; /* Separar los elementos */
     align-items: center; /* Centrar verticalmente */
-    padding: 20px;
-    background-color: #121212; /* Fondo oscuro */
+    background-color: #0f1317ca; /* Fondo oscuro */
     color: #f4f4f4; /* Texto claro */
     border-bottom: 2px solid #444;
   }

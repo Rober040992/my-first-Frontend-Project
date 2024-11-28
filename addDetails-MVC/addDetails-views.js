@@ -1,7 +1,6 @@
 export function drawAddDetail(add) {
     return `
-      <div class = "add-detail-container">
-            <h1>hola<h1>
+      <div>
             <p><img src="${add.img}" style="max-width: 100%;"></p>
             <p>Name: ${add.name}</p>
             <p>Description: ${add.description}</p>
@@ -9,4 +8,10 @@ export function drawAddDetail(add) {
             <p>Status: ${add.status}</p>
         </div>
     `;
+  }
+
+  export function deleteButton() {
+    const removeButton = document.createElement('button');
+    removeButton.textContent = "DELETE";
+    return removeButton;
   }

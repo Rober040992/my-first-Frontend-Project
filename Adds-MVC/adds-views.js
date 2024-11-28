@@ -1,7 +1,6 @@
 //aqui creo las finciones que va a usar el drawAddcontroller
 export const buildAdd = (add) => {
     const newAdd = document.createElement('a');
-    newAdd.setAttribute("href", `/addDetails.html?id=${add.id}`);
     newAdd.innerHTML = `
         <div class="each-add">
             <div class="add-grid">
@@ -10,6 +9,8 @@ export const buildAdd = (add) => {
                 <div class="add-description"> Description: ${add.description}</div>
                 <div class="add-price">${add.price} &dollar;</div>
                 <div class="add-status"> To: ${add.status}</div>
+                <div>usuario: ${add.user.username}</div>
+                <a href="/addDetails.html?id=${add.id}">View Details</a>
             </div>
         </div>   
     `;

@@ -1,0 +1,76 @@
+{
+  "users": [
+    {
+      "username": "ex@mail.com",
+      "password": "$2b$10$MF0gNQ9ISWyRhTvNacA1NuzXxToo2Fdj8s/2M7kOoGSrZ0aII2Yo.",
+      "id": 1
+    },
+    {
+      "username": "ex@mail.com",
+      "password": "$2b$10$MF0gNQ9ISWyRhTvNacA1NuzXxToo2Fdj8s/2M7kOoGSrZ0aII2Yo.",
+      "id": 2
+    },
+    {
+      "username": "otro@gmail.com",
+      "password": "$2b$10$/Ygc3eSS23gDu2TpFaiD8erxE/wJYZ/BBpMJN19vsiw3FsvroWkt.",
+      "id": 3
+    },
+    {
+      "username": "sign@gmail.com",
+      "password": "$2b$10$YbE5ZNLDeogdFfEdNmH9rOSRcMVij3HHdFvR2528S/e0OoQP5BJB.",
+      "id": 4
+    },
+    {
+      "username": "sign@gmail.com",
+      "password": "$2b$10$YbE5ZNLDeogdFfEdNmH9rOSRcMVij3HHdFvR2528S/e0OoQP5BJB.",
+      "id": 5
+    },
+    {
+      "username": "sign@gmail.com",
+      "password": "$2b$10$YbE5ZNLDeogdFfEdNmH9rOSRcMVij3HHdFvR2528S/e0OoQP5BJB.",
+      "id": 6
+    },
+    {
+      "username": "prueba@kc.es",
+      "password": "$2b$10$RHJXIVUY12FhMd2aP9bqmuCs6vVp7g0me8Kvm8JYY3n4mHR2i.O4C",
+      "id": 7
+    },
+    {
+      "username": "edudameelapto@pordios.es",
+      "password": "$2b$10$YOi15zmicLHT98IncYiwCe6f0BstiYzISnGCXQpI2MGF1j8q4QZfm",
+      "id": 8
+    }
+  ],
+  "adds": [
+    {
+      "name": "add de otro@gmail.com",
+      "description": "1",
+      "price": "1",
+      "status": "Sell",
+      "img": "https://picsum.photos/200/300",
+      "userId": 3,
+      "updatedAt": "2024-11-27T13:09:30.086Z",
+      "id": 1
+    },
+    {
+      "name": "add creado con ex@mail.com",
+      "description": "ex@mail.com",
+      "price": "123413",
+      "status": "Buy",
+      "img": "",
+      "userId": 1,
+      "updatedAt": "2024-11-28T18:54:12.839Z",
+      "id": 3
+    },
+    {
+      "name": "NoMeHaDaoTiempoPaLasOpcionales",
+      "description": "como la paginacion pero todo lo demas esta Done",
+      "price": "1000000",
+      "status": "Buy",
+      "img": "",
+      "userId": 8,
+      "updatedAt": "2024-11-28T22:55:44.007Z",
+      "id": 4
+    }
+  ]
+}

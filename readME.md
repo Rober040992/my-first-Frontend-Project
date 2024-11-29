@@ -3,7 +3,7 @@
 
 ## Nota pal profe:
 - no me dio tiempo a meter las opcionales de los requisitos ni ha rematar algunos detalles ,  pero creo que esta todo lo necesario.
-
+- estados de interfaz implementados excepto ruleta de carga carga excepto index que contiene todo. 
 ### Clona el repositorio:
 Abre una terminal y clona este repositorio en tu máquina local:
 ```bash
